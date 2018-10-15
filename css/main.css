@@ -95,8 +95,69 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+    background-color: #37385c;
+    height: 100%;
+}
 
+body {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    padding: 0 2em; 
+    font-size: 1.25em;
+    height: 100%;
+}
 
+.wrapper {    
+    font-weight: bold;  
+}
+
+h3 span, p span {
+    font-family: 'Lora', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+header h1 {
+    font-family: 'Lora', sans-serif;
+    font-size: 3em;
+}
+
+main {
+    border-bottom: 2px solid #fff
+}
+
+main p {
+    font-size: 1.35em;
+}
+
+.flex-items {
+    line-height: 1.5em;
+    font-size: 1em;
+    width: 30%;
+    height: auto;
+}
+
+.flex-items p {
+    padding-right: 20px;
+}
+
+#div-1, #div-2 {
+    border-right: 2px solid #fff;    
+}
+
+footer {
+    border-top: 2px solid #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer i {
+    padding: 30px 20px 0 0;
+}
 
 /* ==========================================================================
    Helper classes
