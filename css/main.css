@@ -98,6 +98,7 @@ textarea {
 html {
     background-color: #37385c;
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -110,6 +111,9 @@ body {
 }
 
 .wrapper {    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     font-weight: bold;  
 }
 
@@ -119,20 +123,34 @@ h3 span, p span {
     font-style: italic;
 }
 
+header, footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+}
+
 header h1 {
     font-family: 'Lora', sans-serif;
     font-size: 3em;
 }
 
-main {
-    border-bottom: 2px solid #fff
+.main {
+    border-bottom: 2px solid #fff;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-main p {
+.main p {
     font-size: 1.35em;
 }
 
 .flex-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 1.5em;
     font-size: 1em;
     width: 30%;
@@ -143,7 +161,7 @@ main p {
     padding-right: 20px;
 }
 
-#div-1, #div-2 {
+#div-1 p, #div-2 p {
     border-right: 2px solid #fff;    
 }
 
@@ -239,26 +257,35 @@ footer i {
    Modify as content requires.
    ========================================================================== */
 
-@media all and (min-width: 600px) {
-  .aside { flex: 1 auto; }
+@media all and (max-width: 400px) {
+    body {
+      padding: 1em;
+    }
+
+    .flex-items {
+        flex: 1 100%;
+    }
+
+    #div-1 p, #div-2 p {
+        border-right: none;
+        border-bottom: 1px solid #fff;
+    }
 }
 
-@media all and (min-width: 800px) {
-  .main {
-  }
-  .main {
-    order: 1;
-  }
-  .aside-1  {
-    order: 2;
-  }
-  .aside-2 {
-    order: 3;
-  }
+@media all and (max-width: 768px) {
+    #div-1, #div-2 {       
+        flex: 1 50%;        
+    } 
 
-  .footer {
-    order: 4;
-  }
+    #div-1 p, #div-2 p {
+        border-right: none;
+        padding-right: 30px;
+    }
+
+    #div-3 {
+        flex: 1 100%;
+        border-top: 2px solid #fff;
+    }
 }
 
 @media print,
